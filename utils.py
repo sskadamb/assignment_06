@@ -3,7 +3,8 @@ import sys
 import os
 import random
 #sys.path.insert(0, os.path.abspath('..'))
-from point import Point
+#from point import Point
+import point
 
 def n_random_points(n):
     """
@@ -18,7 +19,7 @@ def n_random_points(n):
 
 def n_random_Points(n,marks=[]):
 
-    PointList = [Point((random.uniform(0,1),random.uniform(0,1),random.choice(marks))) for x in range(n)]
+    PointList = [point.Point((random.uniform(0,1),random.uniform(0,1),random.choice(marks))) for x in range(n)]
 
     return PointList
 
