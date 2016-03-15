@@ -1,6 +1,9 @@
 import unittest
-
-from .utils import check_coincident, shift_point
+import sys
+import os
+#sys.path.insert(0, os.path.abspath('..'))
+from utils import check_coincident,shift_point
+#from utils import check_coincident, shift_point
 
 class Point(object):
     def __init__(self,x,y,mark={}):

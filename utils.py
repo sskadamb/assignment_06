@@ -1,6 +1,9 @@
 import math
+import sys
+import os
 import random
-from .point import Point
+#sys.path.insert(0, os.path.abspath('..'))
+from point import Point
 
 def n_random_points(n):
     """
@@ -63,7 +66,7 @@ def euclidean_distance(a, b):
     return distance
 
 
-def shift_point(point, x_shift, y_shift):
+def shift_point(points, x_shift, y_shift):
     """
     Shift a point by some amount in the x and y directions
 
@@ -90,12 +93,12 @@ def shift_point(point, x_shift, y_shift):
 
     Example
     -------
-    >>> point = (0,0)
-    >>> shift_point(point, 1, 2)
+    >>> points = (0,0)
+    >>> shift_point(points, 1, 2)
     (1,2)
     """
-    x = getx(point)
-    y = gety(point)
+    x = getx(points)
+    y = gety(points)
 
     x += x_shift
     y += y_shift
@@ -122,7 +125,7 @@ def check_coincident(a, b):
     return a == b
 
 
-def check_in(point, point_list):
+def check_in(points, point_list):
     """
     Check whether point is in the point list
 
@@ -134,10 +137,10 @@ def check_in(point, point_list):
     point_list : list
                  in the form [point, point_1, point_2, ..., point_n]
     """
-    return point in point_list
+    return points in point_list
 
 
-def getx(point):
+def getx(points):
     """
     A simple method to return the x coordinate of
      an tuple in the form(x,y).  We will look at
@@ -153,10 +156,10 @@ def getx(point):
      : int or float
        x coordinate
     """
-    return point[0]
+    return points[0]
 
 
-def gety(point):
+def gety(points):
     """
     A simple method to return the x coordinate of
      an tuple in the form(x,y).  We will look at
@@ -172,4 +175,4 @@ def gety(point):
      : int or float
        y coordinate
     """
-    return point[1]
+    return points[1]

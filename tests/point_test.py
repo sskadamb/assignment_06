@@ -1,12 +1,16 @@
+
 import unittest
 import sys
 import random
 import os
-from collections import Counter
-
 sys.path.insert(0, os.path.abspath('..'))
 
-from ..point import Point
+from point import Point
+from collections import Counter
+
+#sys.path.insert(0, os.path.abspath('..'))
+
+
 
 
 class TestPoint(unittest.TestCase):
@@ -14,9 +18,9 @@ class TestPoint(unittest.TestCase):
         pass
 
     def test_xyCheck(self):
-        point = Point(5,4)
-        self.assertEqual(5,point.x)
-        self.assertEqual(4,point.y)
+        points = Point(5,4)
+        self.assertEqual(5,points.x)
+        self.assertEqual(4,points.y)
 
     def test_coincident(self):
         point1 = Point(1,2)
