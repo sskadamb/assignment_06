@@ -4,7 +4,6 @@ import os
 import random
 #from utils import euclidean_distance, n_random_Points
 #sys.path.insert(0, os.path.abspath('..'))
-from utils import euclidean_distance,n_random_Points
 
 def find_largest_city(gj):
     """
@@ -286,3 +285,5 @@ def significant(CList,distance):
     else:
         result = False
     return result
+
+from utils import euclidean_distance,n_random_Points
