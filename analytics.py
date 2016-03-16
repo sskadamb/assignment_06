@@ -107,7 +107,7 @@ def average_nearest_neighbor_distance(points,mark=None):
      p. 445-453.
     """
     markList = []
-    if mark == None: #then you're computing the distance of all the points
+    if not mark: #If mark is empty, then you're computing the distance of all the points
         shDistL =[]       #list of shortest distances
 
         #now the points are numbered... so if the points
@@ -135,7 +135,7 @@ def average_nearest_neighbor_distance(points,mark=None):
     #compute the average nearest neighbor distance of only those that share the mark
     else:
         for p in points:
-            if p.mark == mark:
+            if p.mark in mark:  #passed in a list of possible marks
                 markList.append(p)
         shDistL =[]       #list of shortest distances
 
@@ -155,7 +155,7 @@ def average_nearest_neighbor_distance(points,mark=None):
         #print(shDistL)
         sums = sum(shDistL)
         mean_d = sums/len(shDistL)
-
+        print(mean_d)
     return mean_d
 
 
@@ -227,7 +227,7 @@ def expected_distance(area, n):
     return expected
 
 
-def permutation_nearest_distance(mark=None,p=99,n=100):
+def permutation_nearest_distance(mark=[],p=99,n=100):
     """
     Finds the nearest neighbor distance for p permutations with n
     random points
@@ -254,7 +254,7 @@ def permutation_nearest_distance(mark=None,p=99,n=100):
         print(points)
         print(type(points))
         #compute mean neighbor distance
-        mean_d = average_nearest_neighbor_distance(points)
+        mean_d = average_nearest_neighbor_distance(points,mark)
         LDist.append(mean_d)
 
     return LDist
