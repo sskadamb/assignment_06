@@ -4,9 +4,6 @@ import os
 import unittest
 sys.path.insert(0, os.path.abspath('..'))
 
-from .. import analytics
-from .. import point
-from .. import utils
 #from ..analytics import permutation_nearest_distance,critical_points,significant,average_nearest_neighbor_distance
 #from ..utils import n_random_Points
 #from ..point import Point
