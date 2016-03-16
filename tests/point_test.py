@@ -5,8 +5,7 @@ import random
 import os
 sys.path.insert(0, os.path.abspath('..'))
 
-from ..point import Point
-from collections import Counter
+
 
 #sys.path.insert(0, os.path.abspath('..'))
 
@@ -61,3 +60,5 @@ class TestPoint(unittest.TestCase):
         self.assertEqual(c["orange"],2)
         self.assertEqual(c["ash"],1)
 
+from ..point import Point
+from collections import Counter

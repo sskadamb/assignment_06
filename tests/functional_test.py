@@ -119,3 +119,7 @@ class TestFunctionalPointPattern(unittest.TestCase):
         self.assertTrue(True)
 
 
+
+from .. import analytics
+from .. import point
+from .. import utils
