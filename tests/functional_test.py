@@ -2,7 +2,7 @@ import random
 import sys
 import os
 import unittest
-sys.path.insert(0, os.path.abspath('..'))
+#sys.path.insert(0, os.path.abspath('..'))
 
 #from ..analytics import permutation_nearest_distance,critical_points,significant,average_nearest_neighbor_distance
 #from ..utils import n_random_Points
