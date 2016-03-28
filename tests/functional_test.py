@@ -74,7 +74,17 @@ class TestFunctionalPointPattern(unittest.TestCase):
         #self.assertListEqual(criMList,criMList)
 
 
+        for m in marks:
+            permutations3 = analytics.permutation_nearest_distance(marks,99,100)
+            self.assertEqual(len(permutations3),99)
+            self.assertNotEqual(permutations3[0],permutations3[1])
 
+            critical3 = analytics.critical_points(permutations3)
+            self.assertTrue(critical3[0] > 0.03)
+            self.assertTrue(critical3[1] < 0.07)
+
+            sig = analytics.significant(critical3,observed_avg)
+            self.assertTrue(sig)
 
         permutations2 = analytics.permutation_nearest_distance(marks,99,100)
         self.assertEqual(len(permutations2),99)

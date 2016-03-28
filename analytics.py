@@ -252,7 +252,7 @@ def permutation_nearest_distance(mark=[],p=99,n=100):
         print("print the points array: ")
         print(points)
         print(type(points))
-        #compute mean neighbor distance
+        #compute m ean neighbor distance
         mean_d = average_nearest_neighbor_distance(points,mark)
         LDist.append(mean_d)
 
