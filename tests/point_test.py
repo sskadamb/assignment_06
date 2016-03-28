@@ -17,18 +17,18 @@ class TestPoint(unittest.TestCase):
         pass
 
     def test_xyCheck(self):
-        points = Point(5,4)
+        points = point.Point(5,4)
         self.assertEqual(5,points.x)
         self.assertEqual(4,points.y)
 
     def test_coincident(self):
-        point1 = Point(1,2)
+        point1 = point.Point(1,2)
 
         self.assertTrue(point1.patched_coincident((1,2)))
         self.assertFalse(point1.patched_coincident((3,4)))
 
     def test_shift(self):
-        point1 = Point(1,0)
+        point1 = point.Point(1,0)
         point1.patched_shift(1,2)
         self.assertEqual((2,2),(point1.x,point1.y))
 
@@ -42,7 +42,7 @@ class TestPoint(unittest.TestCase):
         markArray = []
         #instantiate 15 random points
         for i in range(15):
-            new_point = Point(random.randint(0,9),random.randint(0,9),random.choice(marks))
+            new_point = point.Point(random.randint(0,9),random.randint(0,9),random.choice(marks))
             print(new_point.x)
             print(new_point.y)
             print(new_point.mark)
@@ -60,5 +60,5 @@ class TestPoint(unittest.TestCase):
         self.assertEqual(c["orange"],2)
         self.assertEqual(c["ash"],1)
 
-from ..point import Point
+from .. import point
 from collections import Counter

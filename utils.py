@@ -179,4 +179,4 @@ def gety(points):
     return points[1]
 
 #move to the end to avoid cyclic dependancies
-import point
+from . import point

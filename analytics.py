@@ -122,7 +122,7 @@ def average_nearest_neighbor_distance(points,mark=None):
                         print(point.x)
                     epoint1 = (point.x,point.y)
                     epoint2 = (dpoint.x,dpoint.y)
-                    dist = euclidean_distance(epoint1, epoint2)  #changed input parameters because cannot pass in Point
+                    dist = utils.euclidean_distance(epoint1, epoint2)  #changed input parameters because cannot pass in Point
                     if(shortestDistance > dist):
                         shortestDistance = dist
                 printXonce = True
@@ -146,7 +146,7 @@ def average_nearest_neighbor_distance(points,mark=None):
             shortestDistance = math.inf
             for num2, dpoint in enumerate(markList):
                 if num1 != num2:
-                    dist = euclidean_distance((point.x,point.y), (dpoint.x,dpoint.y))
+                    dist = utils.euclidean_distance((point.x,point.y), (dpoint.x,dpoint.y))
                     if(shortestDistance > dist):
                         shortestDistance = dist
             #now add the shortest distance of that point before it moves on to a new point
@@ -248,7 +248,7 @@ def permutation_nearest_distance(mark=[],p=99,n=100):
     LDist = []
     for x in range(p): #loop from 0 to p
         #create n random Points
-        points = n_random_Points(n,mark) # returns [(x,y),(a,b)..]
+        points = utils.n_random_Points(n,mark) # returns [(x,y),(a,b)..]
         print("print the points array: ")
         print(points)
         print(type(points))
@@ -286,4 +286,4 @@ def significant(CList,distance):
         result = False
     return result
 
-from utils import euclidean_distance,n_random_Points
+from . import utils
